@@ -1,5 +1,6 @@
 %h2 Log in
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+  = render partial: "shared/flash_messages", flash: flash
   .field
     = f.label :email
     %br/
