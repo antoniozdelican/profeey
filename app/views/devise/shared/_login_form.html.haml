@@ -1,7 +1,8 @@
 = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  = render partial: 'shared/flash_messages', flash: flash
+  = render partial: 'shared/flash_messages', flash: flash  
   = f.input :email, placeholder: 'Email', label: false
   = f.input :password, placeholder: 'Password', label: false
   = f.input :remember_me, as: :boolean
   = f.button :submit, 'Log in', class: 'btn btn-success btn-full-width'
+
 = render partial: 'devise/shared/links'

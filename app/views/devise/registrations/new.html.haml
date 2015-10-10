@@ -1,13 +1,14 @@
 .container.container-default
   .row
     .col-xs-12
-      %h2 Sign up
+      %h2 Join Profee
+      %p bla bla
+
       = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
         / = devise_error_messages!
         = render partial: 'shared/error_messages', locals: { target: resource }
-
         = f.input :email, placeholder: 'Email', label: false
         = f.input :password, placeholder: 'Password', label: false
-        = f.button :submit, 'Sign up', class: 'btn btn-full-width'
+        = f.button :submit, 'Sign up', class: 'btn btn-success btn-full-width'
         
-        = render "devise/shared/links"
+      = render "devise/shared/links"

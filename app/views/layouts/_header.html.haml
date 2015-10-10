@@ -1,1 +1,21 @@
-header
+%nav.navbar.navbar-default.navbar-static-top
+  .container
+    .navbar-header
+      %button.navbar-toggle.collapsed{'aria-controls' => 'navbar', 'aria-expanded' => 'false', 'data-target' => '#navbar', 'data-toggle' => 'collapse', :type => 'button'}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => '/'} P
+    - if user_signed_in?
+      #navbar.navbar-collapse.collapse
+        %ul.nav.navbar-nav.navbar-right
+          %li
+            %a{:href => '../navbar/'} Default
+          %li.active
+            %a{:href => './'}
+              Static top
+              %span.sr-only (current)
+          %li
+            %a{:href => '../navbar-fixed-top/'} Fixed top
+    / /.nav-collapse

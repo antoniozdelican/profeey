@@ -1,0 +1,15 @@
+form {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  border-color: $grey;
+  -webkit-box-shadow: none;
+  box-shadow: inset none;
+}
+.form-control:focus {
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(38,153,73,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(38,153,73,.6);
+}

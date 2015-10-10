@@ -1,0 +1,16 @@
+.navbar-default {
+  background-color: $white;
+  border-color: $grey;
+
+  a.navbar-brand {
+    color: $green;
+    &:hover {
+      text-decoration: none;
+      color: $light-green;
+    }
+    &:focus {
+      text-decoration: none;
+      color: $light-green;
+    }
+  }
+}

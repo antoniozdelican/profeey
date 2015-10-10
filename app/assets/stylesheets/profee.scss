@@ -1,9 +1,11 @@
 /* Main css */
 
+/* colors */
 $white: #ffffff;
 $grey: #ededed;
 $green: #2ebd59;
 $light-green: #269949;
+
 
 html {
   position: relative;
@@ -27,11 +29,6 @@ a {
   }
 }
 
-form {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
 footer {
   position: absolute;
   bottom: 0;
@@ -39,6 +36,10 @@ footer {
   height: 70px;
   border-top: 1px solid $grey;
   padding-top: 20px;
+}
+
+.container {
+  max-width: 640px;
 }
 
 .container-default {
