@@ -26,4 +26,9 @@ module ApplicationHelper
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:user]
   end
+
+  # View helper that determins current controller
+  def controller_name
+    params[:controller]
+  end
 end
