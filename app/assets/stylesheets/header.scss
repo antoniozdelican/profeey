@@ -13,4 +13,20 @@
       color: $light-green;
     }
   }
+
+  .navbar-nav {
+    li {
+      a {
+        color: $green;
+        &:hover {
+          text-decoration: none;
+          color: $light-green;
+        }
+        &:focus {
+          text-decoration: none;
+          color: $light-green;
+        }
+      }
+    }
+  }
 }

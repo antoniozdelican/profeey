@@ -1,3 +1,4 @@
+
 %nav.navbar.navbar-default.navbar-static-top
   .container
     .navbar-header
@@ -11,11 +12,5 @@
       #navbar.navbar-collapse.collapse
         %ul.nav.navbar-nav.navbar-right
           %li
-            %a{:href => '../navbar/'} Default
-          %li.active
-            %a{:href => './'}
-              Static top
-              %span.sr-only (current)
-          %li
-            %a{:href => '../navbar-fixed-top/'} Fixed top
+            = link_to('Logout', destroy_user_session_path, :method => :delete)
     / /.nav-collapse

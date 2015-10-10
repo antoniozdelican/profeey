@@ -3,6 +3,9 @@
     .col-xs-12
       %h1 Welcome to Profee
       %p some text goes here
-      %o and here as well
+      %p and here as well
 
-      = render partial: 'devise/shared/login_form'
+      - if user_signed_in?
+        %h2 You are on The Wall
+      - else
+        = render partial: 'devise/shared/login_form'
