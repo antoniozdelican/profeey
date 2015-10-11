@@ -9,17 +9,17 @@
 # Seeding professions from data/professions.xml
 path_to_professions = Rails.root.join('data', 'professions.xml')
 doc = File.open(path_to_professions) { |f| Nokogiri::XML(f) }
-# array = Array.new
+ array = Array.new
 doc.xpath('//li').each do |node|
   profession = node.content
   if profession.include? '/'
-    profession.split('/').each { |profession_part| Profession.create(name: profession_part)}
-  # profession.split('/').each { |profession_part| array << profession_part}
+    profession.split('/').each { |profession_part| Profession.create(name: profession_part.strip)}
+  # profession.split('/').each { |profession_part| array << profession_part.strip}
   else
-  Profession.create(name: profession)
-  # array << profession
+  Profession.create(name: profession.strip)
+  # array << profession.strip
   end
 end
 
-# puts array.count
-# puts array.uniq.count
+ # puts array.count
+ # puts array.uniq.count
