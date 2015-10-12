@@ -22,7 +22,8 @@ gem 'devise'
 gem 'simple_form'
 # Use Typeahead
 gem 'twitter-typeahead-rails'
-# gem 'bootstrap-typeahead-rails'
+# Use Searchkick
+gem 'searchkick'
 # Use CoffeeScript for .coffee assets and views
 # gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
