@@ -22,7 +22,7 @@ gem 'devise'
 gem 'simple_form'
 # Use Typeahead
 gem 'twitter-typeahead-rails'
-# Use Searchkick
+# Use Elasticsearch for search
 # gem 'searchkick'
 # Use CoffeeScript for .coffee assets and views
 # gem 'coffee-rails', '~> 4.1.0'
