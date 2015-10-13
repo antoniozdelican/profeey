@@ -1,11 +1,12 @@
-$(function() {
+var typeahead;
+typeahead = function() {
   var professions = new Bloodhound({
     datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
     queryTokenizer: Bloodhound.tokenizers.whitespace,
     
     // get professions json from database
     // WARNING!! consult the storage limit!!
-    prefetch: 'professions',
+    prefetch: '/professions',
     
     // receives objects in form {"id":1,"name":"Abbot","created_at":"2015-10-11T19:01:55.000Z","updated_at":"2015-10-11T19:01:55.000Z"}
     sorter : function(a, b) {
@@ -48,15 +49,7 @@ $(function() {
     limit: 10
   });
 
-});
+};
 
-
-// $(function() {
-//   var mydata;
-//   $.ajax({
-//     url: 'professions'
-//   }).done(function(data) {
-//     mydata = data;
-//     console.log(mydata);
-//   });
-// });
+$(document).ready(typeahead);
+$(document).on('page:load', typeahead);
