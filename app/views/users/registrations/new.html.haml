@@ -1,0 +1,19 @@
+.container.container-default
+  .row
+    .col-xs-12
+      %h2 Join Profeey
+      %p bla bla
+
+      %label Tell who you are. For example Student, Manager, Bartender... 
+
+      %input.form-control.typeahead{placeholder: 'Profession', type: 'text'}
+
+      = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        / = devise_error_messages!
+        = render partial: 'shared/error_messages', locals: { target: resource }
+        = f.input :full_name, placeholder: 'Full name', label: false
+        = f.input :email, placeholder: 'Email', label: false
+        = f.input :password, placeholder: 'Password', label: false
+        = f.button :submit, 'Sign up', class: 'btn btn-success btn-full-width'
+        
+      = render "devise/shared/links"
