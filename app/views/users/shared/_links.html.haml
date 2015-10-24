@@ -1,13 +1,13 @@
-- if controller_name != 'devise/sessions' && controller_name != 'home'
+- if controller_name != 'users/sessions' && controller_name != 'home'
   = link_to "Log in", new_session_path(resource_name)
   %br/
-- if devise_mapping.registerable? && controller_name != 'devise/registrations'
+- if devise_mapping.registerable? && controller_name != 'users/registrations'
   = link_to "Sign up", new_registration_path(resource_name)
   %br/
-- if devise_mapping.recoverable? && controller_name != 'devise/passwords' && controller_name != 'devise/registrations'
+- if devise_mapping.recoverable? && controller_name != 'users/passwords' && controller_name != 'users/registrations'
   = link_to "Forgot your password?", new_password_path(resource_name)
   %br/
-- if devise_mapping.confirmable? && controller_name != 'devise/confirmations'
+- if devise_mapping.confirmable? && controller_name != 'users/confirmations'
   = link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name)
   %br/
 - if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks'
