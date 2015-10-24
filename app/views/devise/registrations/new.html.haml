@@ -6,7 +6,7 @@
 
       %label Tell who you are. For example Student, Manager, Bartender... 
 
-      %input.form-control.typeahead{placeholder: 'Profession (Student or Manager or Bartender)', type: 'text'}
+      %input.form-control.typeahead{placeholder: 'Profession', type: 'text'}
 
       = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
         / = devise_error_messages!
