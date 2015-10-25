@@ -2,6 +2,7 @@
 
 // Colors
 $white: #ffffff;
+$black: #4f5459;
 $grey: #ededed;
 $green: #2ebd59;
 $light-green: #269949;
@@ -15,6 +16,7 @@ html {
 body {
   background-color: $white;
   margin-bottom: 70px;
+  color: $black;
 }
 
 a {
@@ -27,6 +29,10 @@ a {
     text-decoration: none;
     color: $light-green;
   }
+}
+
+hr {
+  border-top: 1px solid $grey;
 }
 
 footer {
@@ -49,4 +55,8 @@ footer {
 
 .btn-full-width {
   width: 100%;
+}
+
+.center-text {
+  text-align: center;
 }

@@ -1,5 +1,111 @@
 .container
   .row
-    .col-xs-12
+    .col-xs-4
+      %img.img-responsive{:src => 'http://placehold.it/200x200'}
+    .col-xs-8
+      %h1.user-name= @user.full_name
       %p
-        = @user.full_name
+        =# @professions.first.name
+        %a{:href => '#'} Profession 1
+        |
+        %a{:href => '#'} Profession 2
+        |
+        %a{:href => '#'} Profession 3
+        |
+        %a{:href => '#'} Profession 4
+      %p
+        Carcavelos, Lisbon Area, Portugal 
+        (optional?)
+      %p
+        Description Lorem ipsum dolor sit amet, quando nonumes vulputate duo ut, ad clita iudico vix. Et duo sumo utinam facilis.
+      //%p
+      //%a{:href => '#'} 
+      //(optional)
+      %p
+        %a.btn.btn-default{'aria-controls' => 'collapseExample', 'aria-expanded' => 'false', 'data-toggle' => 'collapse', :href => '#collapseExample', :role => 'button'}
+          %span.glyphicon.glyphicon-option-horizontal
+  #collapseExample.collapse
+    .row
+      .col-xs-12.col-sm-2
+        %p
+          %b 
+            Links:
+      .col-xs-12.col-sm-10
+        %p
+          %a{:href => '#'} www.ecample.com
+          (optional)
+    .row
+      .col-xs-12.col-sm-2
+        %p
+          %b 
+            Skills:
+      .col-xs-12.col-sm-10
+        %p
+          %a{:href => '#'} HTML
+          |
+          %a{:href => '#'} CSS
+          |
+          %a{:href => '#'} jQuery
+          |
+          %a{:href => '#'} Team work
+          |
+          %a{:href => '#'} communication
+          |
+          %a{:href => '#'} Surfing
+          |
+          %a{:href => '#'} problem Solving
+    .row
+      .col-xs-12.col-sm-2
+        %p
+          %b 
+            Experience:
+            (optional)
+      .col-xs-12.col-sm-10
+        %p
+          %a{:href => '#'} Software developer
+          %br
+          %a{:href => '#'} Infinum
+          %br
+          5 months
+        %p
+          %a{:href => '#'} Web developer
+          %br
+          %a{:href => '#'} Think Orange
+          %br
+          6 months
+    .row
+      .col-xs-12.col-sm-2
+        %p
+          %b 
+            Education:
+            (optional)
+      .col-xs-12.col-sm-10
+        %p
+          Master's Degree, Enterprise Information Syestems
+          %br
+          Instituto Superior Técnico, University of Lisbon
+          %br
+          September 2014 - now
+        %p
+          Bachelor's Degree, Computer Software Engineering
+          %br
+          Faculty of Electrical Engineering and Computing, University of Zagreb
+          %br
+          September 2010 - July 2014
+  .row
+    .col-xs-4.col-sm-2
+      %b 25
+      things
+    .col-xs-4.col-sm-2
+      %b 500
+      followers
+    .col-xs-4.col-sm-2
+      %b 350
+      following
+    .col-xs-6.col-sm-3.center-text
+      %button.btn.btn-default{:type => 'button'} Follow
+    .col-xs-6.col-sm-3.center-text
+      %button.btn.btn-default{:type => 'button'} Message
+  %hr
+
+  = render partial: 'things/thing'
