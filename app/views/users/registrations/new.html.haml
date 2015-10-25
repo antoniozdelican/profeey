@@ -12,6 +12,8 @@
         / = devise_error_messages!
         = render partial: 'shared/error_messages', locals: { target: resource }
         = f.input :full_name, placeholder: 'Full name', label: false
+        = f.simple_fields_for :professions, include_id: false do |p|
+          = p.input :name, placeholder: 'Profession', label: false
         = f.input :email, placeholder: 'Email', label: false
         = f.input :password, placeholder: 'Password', label: false
         = f.button :submit, 'Sign up', class: 'btn btn-success btn-full-width'
