@@ -3,3 +3,27 @@
 .user-name {
 
 }
+
+.the-thing {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  border: 1px solid $grey;
+  border-radius: 4px;
+}
+.the-header {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  .inner {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+.the-info {
+  padding-left: 15px;
+  padding-right: 15px;
+}
