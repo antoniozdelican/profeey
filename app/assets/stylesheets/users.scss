@@ -5,7 +5,7 @@
 }
 
 .the-thing {
-  margin-top: 10px;
+  // margin-top: 10px;
   margin-bottom: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -26,4 +26,15 @@
 .the-info {
   padding-left: 15px;
   padding-right: 15px;
+}
+.the-actions {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.btn-area {
+  white-space: normal;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  text-align: left;
 }

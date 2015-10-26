@@ -22,9 +22,9 @@
       //%a{:href => '#'} 
       //(optional)
       %p
-        %a.btn.btn-default{'aria-controls' => 'collapseExample', 'aria-expanded' => 'false', 'data-toggle' => 'collapse', :href => '#collapseExample', :role => 'button'}
+        %a.btn.btn-default{'aria-controls' => 'collapseInfo', 'aria-expanded' => 'false', 'data-toggle' => 'collapse', :href => '#collapseInfo', :role => 'button'}
           %span.glyphicon.glyphicon-option-horizontal
-  #collapseExample.collapse
+  #collapseInfo.collapse
     .row
       .col-xs-12.col-sm-2
         %p
@@ -66,13 +66,13 @@
           %br
           %a{:href => '#'} Infinum
           %br
-          5 months
+          April 2014 - September 2014
         %p
           %a{:href => '#'} Web developer
           %br
           %a{:href => '#'} Think Orange
           %br
-          6 months
+          September 2013 - March 2014
     .row
       .col-xs-12.col-sm-2
         %p
@@ -108,4 +108,19 @@
       %button.btn.btn-default{:type => 'button'} Message
   %hr
 
-  = render partial: 'things/thing'
+  .row
+    .col-sm-3
+      %b My top 5 things
+      %br
+      %button.btn.btn-default.btn-area{:type => 'button'} Web development (5)
+      %br
+      %button.btn.btn-default.btn-area{:type => 'button'} surfing (10)
+      %br
+      %button.btn.btn-default.btn-area{:type => 'button'} board repair (2)
+      %br
+      %button.btn.btn-default.btn-area{:type => 'button'} Enterprise information systems (4)
+      %br
+      %button.btn.btn-default.btn-area{:type => 'button'} inventing (18)
+    .col-sm-9
+      - 3.times do
+        = render partial: 'things/thing'
