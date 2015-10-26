@@ -5,7 +5,7 @@ $white: #ffffff;
 $black: #4f5459;
 $light-grey: #ededed;
 $grey: #b2b4b8;
-$dark-grey: #a9abb0;
+$dark-grey: #A4A6AB;
 $green: #2ebd59;
 $light-green: #269949;
 
@@ -31,8 +31,14 @@ a {
     text-decoration: none;
     color: $light-green;
   }
-  &.dark-grey-link {
-    color: $dark-grey;
+  &.grey-link {
+    color: $grey;
+    &:hover {
+      color: $dark-grey;
+    }
+    &:focus {
+      color: $dark-grey;
+    }
   }
 }
 

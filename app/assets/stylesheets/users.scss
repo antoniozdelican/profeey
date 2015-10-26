@@ -40,12 +40,21 @@
 .the-likes {
   padding-left: 15px;
   padding-right: 15px;
+  padding-bottom: 10px;
 }
 .the-comments {
   padding-left: 15px;
   padding-right: 15px;
   .the-comment {
     padding-bottom: 10px;
+  }
+  .the-new-comment{
+    input {
+      border-color: $light-grey;
+      box-shadow: none;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+    }
   }
 }
 
