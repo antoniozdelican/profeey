@@ -1,8 +1,7 @@
 // Things
 
 .the-thing {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 0;
@@ -11,6 +10,8 @@
   border-radius: 4px;
   &.the-thing-small {
     padding-top: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 }
 

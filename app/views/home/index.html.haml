@@ -2,10 +2,11 @@
   .row
     .col-xs-12
       %h1 Welcome to Profeey
-      %p some text goes here
-      %p and here as well
 
       - if user_signed_in?
-        %h2 You are on The Wall
+        - 3.times do
+          = render partial: 'things/thing'
       - else
+        %p some text goes here
+        %p and here as well
         = render partial: 'users/shared/login_form'
