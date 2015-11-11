@@ -3,7 +3,9 @@
     .col-xs-4
       %img.img-responsive.img-rounded{:src => 'http://placehold.it/200x200'}
     .col-xs-8
-      %h1.user-name= @user.full_name
+      %h1.user-name
+        // = @user.full_name
+        Some John
       %p
         =# @professions.first.name
         %a{:href => '#'} Profession 1
@@ -22,7 +24,7 @@
       //%a{:href => '#'} 
       //(optional)
       %p
-        %a.btn.btn-default{'aria-controls' => 'collapseInfo', 'aria-expanded' => 'false', 'data-toggle' => 'collapse', :href => '#collapseInfo', :role => 'button'}
+        %a.btn.btn-more-info.grey-link{'aria-controls' => 'collapseInfo', 'aria-expanded' => 'false', 'data-toggle' => 'collapse', :href => '#collapseInfo', :role => 'button'}
           %span.glyphicon.glyphicon-option-horizontal
   #collapseInfo.collapse
     .row
@@ -106,6 +108,7 @@
       %button.btn.btn-default{:type => 'button'} Follow
     .col-xs-6.col-sm-3.center-text
       %button.btn.btn-default{:type => 'button'} Message
-  %hr
+  
+  %hr.small-margin
 
   = render partial: 'things/things'

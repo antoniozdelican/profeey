@@ -32,12 +32,16 @@ a {
     color: $light-green;
   }
   &.grey-link {
-    color: $grey;
+    // color: $grey;
+    color: inherit;
+    opacity: .3;
     &:hover {
-      color: $dark-grey;
+      // color: $dark-grey;
+      opacity: .6;
     }
     &:focus {
-      color: $dark-grey;
+      opacity: .6;
+      // color: $dark-grey;
     }
   }
 }

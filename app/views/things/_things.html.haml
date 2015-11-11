@@ -1,5 +1,9 @@
 .the-things
-  .the-tags
+  %a.grey-link{'aria-controls' => 'filterTags', 'aria-expanded' => 'false', 'data-toggle' => 'collapse', :href => '#filterTags', :role => 'button'}
+    Select my things
+    %span.glyphicon.glyphicon-triangle-right
+  
+  #filterTags.collapse
     %button.btn.btn-default.btn-tag{:type => 'button'} 
       Web development
     %button.btn.btn-default.btn-tag{:type => 'button'}
@@ -32,7 +36,9 @@
       inventing some stuff
     %button.btn.btn-default.btn-tag{:type => 'button'}
       Enterprise information systems
+  
   %hr.small-margin
+  
   Showing:
   %button.btn.btn-default.btn-tag{:type => 'button'} 
     Project management
