@@ -1,0 +1,96 @@
+// Things
+
+.the-thing {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  border: 1px solid $light-grey;
+  border-radius: 4px;
+  &.the-thing-small {
+    padding-top: 0;
+  }
+}
+
+.the-header {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  .inner {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.the-info {
+  padding-left: 15px;
+  padding-right: 15px;
+  .the-title {
+    h4 {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      font-size: 16px;
+      line-height: 1.4em;
+    }
+  }
+  .the-tags {
+    p {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      height: 1.4em;
+      line-height: 1.4em;
+    }
+  }
+  .the-description {
+  }
+}
+
+.the-actions {
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 20px;
+  .the-action {
+    display: inline-block;
+    padding-right: 30px;
+  }
+}
+
+.the-media {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+}
+
+.the-comments {
+  padding-left: 15px;
+  padding-right: 15px;
+  .the-comment {
+    padding-bottom: 10px;
+  }
+  .the-new-comment{
+    input {
+      border-color: $light-grey;
+      box-shadow: none;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+    }
+  }
+}
+
+.btn-tag {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  .remove-x {
+    padding-left: 4px;
+    opacity: .2;
+  }
+  &:hover{
+    .remove-x {
+      opacity: 1;
+    }
+  }
+}
