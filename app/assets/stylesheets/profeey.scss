@@ -72,6 +72,11 @@ footer {
   width: 100%;
 }
 
+.btn {
+  // overriding bootstrap 12px side padding
+  padding: 6px 10px;
+}
+
 .btn-full-width {
   width: 100%;
 }
