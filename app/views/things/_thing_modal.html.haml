@@ -1,0 +1,6 @@
+.modal.fade.bs-example-modal-lg{"aria-labelledby" => "myLargeModalLabel", :role => "dialog", :tabindex => "-1"}
+  %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+    %span{"aria-hidden" => "true"} &times;
+  .modal-dialog.modal-lg
+    .modal-content
+      = render partial: 'things/thing'
