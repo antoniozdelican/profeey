@@ -113,5 +113,10 @@
 
   = render partial: 'things/things'
 
-.the-thing-modal
-  = render partial: 'things/thing_modal'
+.modal-container
+  .modal.fade.modal-full-screen{"aria-labelledby" => "largeModal", :role => "dialog", :tabindex => "-1"}
+    %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+      %span{"aria-hidden" => "true"} &times;
+    .modal-dialog.modal-lg
+      .modal-content
+        = render partial: 'things/thing_medium'
