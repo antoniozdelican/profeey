@@ -1,16 +1,25 @@
 .the-thing
-  .the-header
-    %img.img-rounded{:src => 'http://placehold.it/45x45'}
-    %a{:href => '#'} Antonio Zdelican
-    |
-    Profession 1
-    .pull-right
-      5 min
+  .the-inner-section
+    .the-header
+      %img.img-rounded{:src => 'http://placehold.it/40x40'}
+      .the-name-and-professions
+        .the-name
+          %a{:href => '#'} Antonio Zdelican
+        .the-professions
+          Surfer
+          |
+          Web developer
+          |
+          Engineer
+          |
+          Profession 4    
+      .pull-right
+        5 min
 
   .the-image
     %img.img-responsive.full-width{:src => 'http://placehold.it/300x200'}
 
-  .the-info
+  .the-inner-section
     .the-title
       %h4 Some title
     .the-tags
@@ -26,29 +35,28 @@
       %p
         Description Lorem ipsum dolor sit amet, quando nonumes vulputate duo ut, ad clita iudico vix. Et duo sumo utinam facilis.
 
-  %hr.small-margin
+    %hr.small-margin
 
-  .the-actions
-    .the-action
-      %a{:href => '#'}
-        %span.fa.fa-thumbs-o-up
-    .the-action
-      %a{:href => '#'}
-        %span.fa.fa-comment-o
-    .the-action
-      %a{:href => '#'}
-        %span.fa.fa-share-square-o
+    .the-actions
+      .the-action
+        %a{:href => '#'}
+          %span.fa.fa-thumbs-o-up
+      .the-action
+        %a{:href => '#'}
+          %span.fa.fa-comment-o
+      .the-action
+        %a{:href => '#'}
+          %span.fa.fa-share-square-o
 
-  %hr.small-margin
+    %hr.small-margin
 
-  .the-media
-    %a{:href => '#'} 150 likes
+    .the-media
+      %a{:href => '#'} 150 likes
 
-  .the-comments
-    %p
+    .the-comments
       %a.grey-link{:href => '#'} view more comments
-    - 3.times do
-      = render partial: 'comments/comment'
-    = render partial: 'comments/new_comment'
+      - 3.times do
+        = render partial: 'comments/comment'
+      = render partial: 'comments/new_comment'
     
 

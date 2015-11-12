@@ -1,12 +1,11 @@
 .container.container-default
   .row
     .col-xs-12
-      %h1 Welcome to Profeey
-
       - if user_signed_in?
         - 3.times do
           = render partial: 'things/thing'
       - else
+        %h1 Welcome to Profeey
         %p some text goes here
         %p and here as well
         = render partial: 'users/shared/login_form'

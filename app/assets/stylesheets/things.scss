@@ -2,42 +2,43 @@
 
 .the-thing {
   margin-bottom: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 0;
-  padding-right: 0;
   border: 1px solid $light-grey;
   border-radius: 4px;
   &.the-thing-small {
-    padding-top: 0;
     margin-top: 5px;
     margin-bottom: 5px;
   }
   &.the-thing-medium {
-    padding-top: 0;
-    margin-top: 0;
     border: 0;
+    .the-col-left {
+      padding-right: 0; // to have total space of 20px between columns
+    }
+    .the-col-right {
+      padding-left: 0;
+    }
   }
+}
+
+.the-inner-section {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .the-header {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 10px;
-  .inner {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  img {
+    vertical-align: top;
+  }
+  .the-name-and-professions{
     display: inline-block;
-    vertical-align: middle;
+    padding-left: 7px;
   }
   &.the-header-medium {
-    padding-left: 0;
-    padding-right: 10px;
-    padding-top: 10px;
   }
-}
-
-.the-info {
-  padding-left: 15px;
-  padding-right: 15px;
+  &.the-header-comment {
+    padding-bottom: 5px;
+  }
 }
 
 .the-title {
@@ -67,14 +68,9 @@
 }
 
 .the-description {
-  &.the-description-medium {
-    padding-right: 10px;
-  }
 }
 
 .the-actions {
-  padding-left: 15px;
-  padding-right: 15px;
   font-size: 20px;
   .the-action {
     display: inline-block;
@@ -83,16 +79,13 @@
 }
 
 .the-media {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 10px;
+  // padding-bottom: 10px;
 }
 
 .the-comments {
-  padding-left: 15px;
-  padding-right: 15px;
   .the-comment {
-    padding-bottom: 10px;
+    font-size: 12px;
+    // padding-bottom: 10px;
   }
   .the-new-comment{
     input {
@@ -101,6 +94,9 @@
       -moz-box-shadow: none;
       -webkit-box-shadow: none;
     }
+  }
+  .the-comment-text {
+    padding-left: 40px;
   }
 }
 
