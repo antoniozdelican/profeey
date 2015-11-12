@@ -7,6 +7,7 @@
   &.the-thing-small {
     margin-top: 5px;
     margin-bottom: 5px;
+    font-size: 13px;
   }
   &.the-thing-medium {
     border: 0;
@@ -16,28 +17,39 @@
     .the-col-right {
       padding-left: 0;
     }
+    // this sucks
+    .the-name-and-professions {
+      max-width: 190px;
+    }
   }
 }
 
 .the-inner-section {
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  &.the-inner-section-small {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
 }
 
 .the-header {
-  padding-top: 15px;
-  padding-bottom: 15px;
   img {
     vertical-align: top;
   }
-  .the-name-and-professions{
+  .the-name-and-professions {
     display: inline-block;
     padding-left: 7px;
   }
   &.the-header-medium {
+    padding-bottom: 5px;
   }
   &.the-header-comment {
-    padding-bottom: 5px;
+    padding-bottom: 3px;
   }
 }
 
@@ -45,12 +57,16 @@
   h4 {
     font-size: 16px;
     line-height: 1.4em;
+    margin-top: 0;
+    margin-bottom: 5px;
   }
   &.the-title-small {
     h4 {
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
+      font-size: 15px;
+      margin-bottom: 5px;
     }
   }
 }
@@ -58,6 +74,7 @@
 .the-tags {
   p {
     line-height: 1.4em;
+    margin-bottom: 5px;
   }
   &.the-tags-small {
     white-space: nowrap;
@@ -68,6 +85,9 @@
 }
 
 .the-description {
+  p {
+    margin-bottom: 5px;
+  }
 }
 
 .the-actions {
@@ -82,21 +102,36 @@
   // padding-bottom: 10px;
 }
 
-.the-comments {
-  .the-comment {
-    font-size: 12px;
-    // padding-bottom: 10px;
+
+.the-comment {
+  font-size: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.the-new-comment {
+  .form-group {
+    margin-bottom: 0;
   }
-  .the-new-comment{
-    input {
-      border-color: $light-grey;
-      box-shadow: none;
-      -moz-box-shadow: none;
-      -webkit-box-shadow: none;
-    }
+  input {
+    border-color: $light-grey;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    border:1px solid #ccc !important;
   }
-  .the-comment-text {
-    padding-left: 40px;
+}
+.the-comment-text {
+  padding-left: 40px;
+}
+
+a.modal-link {
+  cursor: pointer;
+  color: $black;
+  &:hover {
+    color: #000;
+  }
+  &:focus {
+    color: #000;
   }
 }
 
@@ -112,4 +147,26 @@
       opacity: .8;
     }
   }
+}
+
+.test {
+  //display: -webkit-flex;
+  //display: flex;
+  height: 100%;
+      //-webkit-flex-wrap: wrap;
+      //-ms-flex-wrap: wrap;
+      //flex-wrap: wrap;
+}
+.item1a {
+  -webkit-flex: 1;  /* Safari 6.1+ */
+      -ms-flex: 1;  /* IE 10 */    
+      flex: 1;
+}
+.item2 {
+  .the-comments {
+    max-height: 300px;
+    overflow: auto;
+  }
+
+
 }
