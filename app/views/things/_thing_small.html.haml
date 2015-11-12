@@ -1,10 +1,12 @@
 .the-thing.the-thing-small
   .the-image
-    %img.img-responsive.full-width{:src => 'http://placehold.it/300x200'}
+    %a.modal-link{"data-target" => ".modal-full-screen", "data-toggle" => "modal"}
+      %img.img-responsive.full-width{:src => 'http://placehold.it/300x200'}
 
-  .the-info
+  .the-inner-section.the-inner-section-small
     .the-title.the-title-small
-      %h4 Some title that is crazy long Lorem ipsum dolor sit amet, quando nonumes vulputate duo ut, ad clita iudico vix.
+      %a.modal-link{"data-target" => ".modal-full-screen", "data-toggle" => "modal"}
+        %h4 Some title that is crazy long Lorem ipsum dolor sit amet, quando nonumes vulputate duo ut, ad clita iudico vix.
     .the-tags.the-tags-small
       %p
         %a{:href => '#'} web development
@@ -15,8 +17,8 @@
         |
         %a{:href => '#'} $tag4
 
-  %hr.small-margin
+    %hr.small-margin
   
-  .the-media
-    %a{:href => '#'} 150 likes
-    %a{"data-target" => ".modal-full-screen", "data-toggle" => "modal", :type => "button"} Modal
+    .the-media
+      %a.grey-link{:href => '#'} 150 likes
+      %a.grey-link{:href => '#'} 12 comments

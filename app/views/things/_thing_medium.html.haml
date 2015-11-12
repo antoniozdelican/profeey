@@ -4,7 +4,7 @@
       .the-image
         %img.img-responsive.full-width{:src => 'http://placehold.it/300x200'}
 
-      .the-info
+      .the-inner-section
         .the-title
           %h4 Some title
         .the-tags 
@@ -32,7 +32,7 @@
     .col-xs-4.the-col-right
       .the-inner-section
         .the-header.the-header-medium
-          %img.img-rounded{:src => 'http://placehold.it/45x45'}
+          %img.img-rounded{:src => 'http://placehold.it/40x40'}
           
           .the-name-and-professions
             .the-name
@@ -70,4 +70,4 @@
             %a.grey-link{:href => '#'} view more comments
           - 3.times do
             = render partial: 'comments/comment'
-          = render partial: 'comments/new_comment'
+        = render partial: 'comments/new_comment'

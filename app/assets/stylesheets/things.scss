@@ -16,6 +16,12 @@
     }
     .the-col-right {
       padding-left: 0;
+
+      // this sucks
+      .the-comments {
+        max-height: 300px;
+        overflow: auto;
+      }
     }
     // this sucks
     .the-name-and-professions {
@@ -147,26 +153,4 @@ a.modal-link {
       opacity: .8;
     }
   }
-}
-
-.test {
-  //display: -webkit-flex;
-  //display: flex;
-  height: 100%;
-      //-webkit-flex-wrap: wrap;
-      //-ms-flex-wrap: wrap;
-      //flex-wrap: wrap;
-}
-.item1a {
-  -webkit-flex: 1;  /* Safari 6.1+ */
-      -ms-flex: 1;  /* IE 10 */    
-      flex: 1;
-}
-.item2 {
-  .the-comments {
-    max-height: 300px;
-    overflow: auto;
-  }
-
-
 }

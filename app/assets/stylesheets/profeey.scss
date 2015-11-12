@@ -34,13 +34,13 @@ a {
   &.grey-link {
     // color: $grey;
     color: inherit;
-    opacity: .3;
+    opacity: .4;
     &:hover {
       // color: $dark-grey;
-      opacity: .6;
+      opacity: .7;
     }
     &:focus {
-      opacity: .6;
+      opacity: .7;
       // color: $dark-grey;
     }
   }
