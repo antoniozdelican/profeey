@@ -10,11 +10,30 @@
       %a.navbar-brand{:href => '/'} P
     - if user_signed_in?
       #navbar.navbar-collapse.collapse
+        %ul.nav.navbar-nav
+          %li
+            = link_to '#' do
+              %span.fa.fa-bell.the-icon
+          %li
+            = link_to '#' do
+              %span.fa.fa-envelope.the-icon
+        
         %ul.nav.navbar-nav.navbar-right
           %li
-            = link_to 'The Me', current_user
-          %li
-            = link_to 'Logout', destroy_user_session_path, method: :delete
+            = link_to current_user do
+              %span.fa.fa-user.the-icon
+          %li.dropdown
+            %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              %span.fa.fa-cog.the-icon
+              %span.caret
+            %ul.dropdown-menu
+              %li
+                %a{:href => "#"} Action
+              %li
+                %a{:href => "#"} Another action
+              %li.divider{:role => "separator"}
+              %li
+                = link_to 'Logout', destroy_user_session_path, method: :delete
 
         .col-sm-4.col-md-4.pull-right
           %form.navbar-form{:role => "search"}
