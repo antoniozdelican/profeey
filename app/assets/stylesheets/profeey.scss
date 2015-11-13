@@ -63,6 +63,14 @@ footer {
   padding-top: 20px;
 }
 
+input {
+  border-color: $light-grey;
+  box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  border:1px solid #ccc !important;
+}
+
 .container {
   // max-width: 640px;
   // max-width: 768px;
