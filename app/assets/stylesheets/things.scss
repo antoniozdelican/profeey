@@ -28,6 +28,10 @@
       max-width: 190px;
     }
   }
+  &.the-new-thing {
+    border: 0;
+    margin: 0;
+  }
 }
 
 .the-inner-section {
@@ -40,6 +44,10 @@
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 10px;
+  }
+  &.the-inner-section-new {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -56,6 +64,14 @@
   }
   &.the-header-comment {
     padding-bottom: 3px;
+  }
+}
+
+.the-image {
+  img {
+    margin: auto;
+    max-height: 500px;
+    width: 500px;
   }
 }
 

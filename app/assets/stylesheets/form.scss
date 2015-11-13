@@ -5,7 +5,8 @@ form {
   margin-bottom: 20px;
 }
 
-input.form-control {
+input.form-control,
+textarea.form-control {
   border-color: $default-grey !important;
   box-shadow: none !important;
   -moz-box-shadow: none !important;
@@ -16,5 +17,16 @@ input.form-control {
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(38,153,73,.6);
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(38,153,73,.6);
   }
+}
+
+textarea.the-new-thing-input,
+input.the-new-thing-input {
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid $default-grey;
+}
+
+textarea {
+  resize: none;
 }
 
