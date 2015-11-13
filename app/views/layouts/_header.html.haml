@@ -10,6 +10,9 @@
       %a.navbar-brand{:href => '/'} P
     - if user_signed_in?
       #navbar.navbar-collapse.collapse
+        .the-post-button
+          %span.fa.fa-pencil-square-o
+        
         %ul.nav.navbar-nav
           %li
             = link_to '#' do
@@ -35,7 +38,7 @@
               %li
                 = link_to 'Logout', destroy_user_session_path, method: :delete
 
-        .col-sm-4.col-md-4.pull-right
+        %div.pull-right
           %form.navbar-form{:role => "search"}
             .input-group
               %input#search-field.form-control{:name => "search-field", :placeholder => "Search...", :type => "text"}

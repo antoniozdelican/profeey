@@ -3,7 +3,6 @@
 .navbar-default {
   background-color: $white;
   border-color: $light-grey;
-
   a.navbar-brand {
     color: $green;
     &:hover {
@@ -15,7 +14,6 @@
       color: $light-green;
     }
   }
-
   .navbar-nav {
     li {
       a {
@@ -33,12 +31,31 @@
   }
 }
 
+#navbar {
+  @media screen and (min-width: 768px) {
+    text-align: center;
+  } 
+}
+
+.the-post-button {
+  @media screen and (min-width: 768px) {
+    position:absolute;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+  } 
+}
+
 .navbar-form {
   padding-left: 0;
   padding-right: 0;
   border: 0;
   .input-group {
     width: 100%;
+  }
+  .input-group-btn {
+    text-align: left;
   }
 }
 
