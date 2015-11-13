@@ -11,7 +11,7 @@
     - if user_signed_in?
       #navbar.navbar-collapse.collapse
         .the-post-button
-          %a{:href => '/'}
+          %a.the-post-link{"data-target" => ".modal-full-screen", "data-toggle" => "modal"}
             %span.fa.fa-pencil-square-o
         
         %ul.nav.navbar-nav
