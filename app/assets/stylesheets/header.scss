@@ -61,10 +61,15 @@ button#search-button {
     background-color: transparent;
     border-color: $default-grey;
     color: $black;
+    outline: none;
   }
   &:focus {
     background-color: transparent;
     border-color: $default-grey;
     color: $black;
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
   }
 }
