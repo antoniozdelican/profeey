@@ -32,3 +32,39 @@
     }
   }
 }
+
+.navbar-form {
+  padding-left: 0;
+  padding-right: 0;
+  border: 0;
+  .input-group {
+    width: 100%;
+  }
+}
+
+input#search-field {
+  border-radius: 6px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-right: 0 !important;
+  padding-right: 2px;
+}
+button#search-button {
+  border-radius: 6px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-left: 0;
+  padding-left: 4px;
+  // this needs to be checked!!!
+  color: $grey;
+  &:hover {
+    background-color: transparent;
+    border-color: $default-grey;
+    color: $black;
+  }
+  &:focus {
+    background-color: transparent;
+    border-color: $default-grey;
+    color: $black;
+  }
+}
