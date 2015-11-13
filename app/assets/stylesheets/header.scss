@@ -38,11 +38,16 @@
 }
 
 .the-post-button {
+  color: $green;
+  font-size: 25px;
+  padding-top: 8px;
   @media screen and (min-width: 768px) {
     position:absolute;
     left:50%;
-    margin-left:auto;
-    margin-right:auto;
+    -ms-transform: translate(-50%,0); /* IE 9 */
+    -webkit-transform: translate(-50%,0); /* Safari */
+    transform: translate(-50%,0);
+
   } 
 }
 
