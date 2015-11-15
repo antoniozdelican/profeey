@@ -69,6 +69,7 @@ imageReader = function() {
   });
   
   removeNewImageButton.on('click', function() {
+    imageInput.val('');
     imageArea.html('');
     newImageContainer.addClass('hidden');
     imageUpload.removeClass('hidden');
