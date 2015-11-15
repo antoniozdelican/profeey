@@ -68,12 +68,23 @@
 }
 
 .the-image {
-  img.big-image {
+  text-align: center;
+  img.the-big-image {
     margin: auto;
     max-height: 500px;
     width: 500px;
   }
-  
+  img.the-new-image {
+    margin: auto;
+    //max-height: 350px;
+    min-height: 350px;
+    min-width: 350px;
+  }
+}
+
+#imageArea {
+  width: 100%;
+  height: 350px;
 }
 
 .the-title {

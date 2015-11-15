@@ -16,5 +16,5 @@
 //= require bootstrap-sprockets
 //= require twitter/typeahead
 //= require jquery.color
-//= require jquery.Jcrop
+//= require Jcrop
 //= require_tree .

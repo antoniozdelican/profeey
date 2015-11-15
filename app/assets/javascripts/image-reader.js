@@ -18,8 +18,20 @@ imageReader = function() {
           // clean previous images
           imageArea.html('');  
           // create new image
-          var img = $('<img />'); //Equivalent: $(document.createElement('img'))
-          img.attr('src', reader.result);
+          // var img = $('<img class="img-responsive the-new-image"/>'); //Equivalent: $(document.createElement('img'))
+          var img = new Image();
+          
+
+          // img.attr('src', reader.result);
+          img.src = reader.result;
+          img.className = 'img-responsive the-new-image';
+
+
+          img.onload = function(e) {
+              console.log(img.width);
+              console.log(img.className);
+
+          };
           imageArea.append(img);
         }
         // read content of the file
