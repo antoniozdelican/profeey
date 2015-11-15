@@ -81,11 +81,30 @@
 }
 
 .the-image-upload {
+  position: relative;
   input#imageInput {
     display: none;
   }
-  img.the-input-placeholder {
+  label.the-input-label {
     cursor: pointer;
+    color: &black;
+    .the-input-placeholder-text {
+      font-size: 36px;
+      opacity: .4;
+      position:absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      -ms-transform: translate(0,-50%); /* IE 9 */
+      -webkit-transform: translate(0,-50%); /* Safari */
+      transform: translate(0,-50%);
+    }
+
+    &:hover {
+      .the-input-placeholder-text {
+        opacity: .7;
+      }
+    }
   }
 }
 

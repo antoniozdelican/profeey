@@ -1,8 +1,11 @@
 .the-thing.the-new-thing
   .the-image
     .the-image-upload
-      %label{:for => "imageInput"}
-        %img.img-responsive.the-input-placeholder{:src => "http://placehold.it/500x500"}
+      %label.the-input-label{:for => "imageInput"}
+        %img.img-responsive.the-input-placeholder{:src => "placeholdit.png"}
+        .the-input-placeholder-text
+          %h1 Tap to add image
+          %span.fa.fa-hand-pointer-o
       %input#imageInput{:type => "file"}
   
     .the-new-image-container.hidden
