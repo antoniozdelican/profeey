@@ -75,14 +75,18 @@
     width: 500px;
   }
   img.the-new-image {
-    max-height: 350px;
+    max-height: 500px;
     margin: auto;
   }
 }
 
-#imageArea {
-  width: 100%;
-  height: 350px;
+.the-image-upload {
+  input#imageInput {
+    display: none;
+  }
+  img.the-input-placeholder {
+    cursor: pointer;
+  }
 }
 
 .the-title {

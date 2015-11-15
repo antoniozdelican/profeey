@@ -1,7 +1,16 @@
 // Modal
 
 .modal {
-  .modal-content {
-    border-radius: 0;
+}
+
+.modal-content {
+  border-radius: 0;
+}
+
+.modal-dialog {
+  &.modal-dialog-new-thing {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
   }
 }

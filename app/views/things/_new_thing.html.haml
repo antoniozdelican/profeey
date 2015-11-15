@@ -1,14 +1,15 @@
 .the-thing.the-new-thing
   .the-image
-    %input#imageInput{:type => "file"}
-    #imageArea
+    .the-image-upload
+      %label{:for => "imageInput"}
+        %img.img-responsive.the-input-placeholder{:src => "http://placehold.it/500x500"}
+      %input#imageInput{:type => "file"}
   
-  .the-image
-    %button.btn.btn-default.click Click
+    .the-image-area
     // %img#target.img-responsive.full-width{:src => 'http://placehold.it/300x200'}
 
   .the-inner-section.the-inner-section-new
-    %form
+    %form.the-new-thing-form
       .form-group
         %input.form-control.the-new-thing-input{:placeholder => "Title of your thing", :type => "text"}
       .form-group

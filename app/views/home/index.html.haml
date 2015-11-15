@@ -14,6 +14,6 @@
   .modal.fade.modal-full-screen{"aria-labelledby" => "largeModal", :role => "dialog", :tabindex => "-1"}
     %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
       %span{"aria-hidden" => "true"} &times;
-    .modal-dialog
+    .modal-dialog.modal-dialog-new-thing
       .modal-content
         = render partial: 'things/new_thing'

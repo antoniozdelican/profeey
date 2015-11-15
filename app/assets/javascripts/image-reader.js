@@ -4,7 +4,7 @@
 var imageReader;
 imageReader = function() {
   var imageInput = $('#imageInput');
-  var imageArea = $('#imageArea');
+  var imageArea = $('.the-image-area');
 
   imageInput.on('change', function(e) {
     var file = imageInput[0].files[0];
