@@ -16,22 +16,40 @@ imageReader = function() {
 
         reader.onload = function(e) {
           // clean previous images
-          imageArea.html('');  
+          imageArea.html('');
           // create new image
-          // var img = $('<img class="img-responsive the-new-image"/>'); //Equivalent: $(document.createElement('img'))
-          var img = new Image();
-          
+          var img = $('<img class="img-responsive the-new-image"/>'); //Equivalent: $(document.createElement('img'))
+          //var img = new Image();         
 
-          // img.attr('src', reader.result);
-          img.src = reader.result;
-          img.className = 'img-responsive the-new-image';
+          // put data into image
+          img.attr('src', reader.result);
+          //img.src = reader.result;
+          //img.className = 'img-responsive the-new-image';
 
+          //console.log(img.width);
 
-          img.onload = function(e) {
-              console.log(img.width);
-              console.log(img.className);
+          //img.onload = function(e) {
+          //  img.height = '350';
 
-          };
+            //imageCroper();
+
+          //};
+
+          // var imageWidth = img.width;
+          // var imageHeight = img.height;
+          // if (imageWidth >= imageHeight) {
+          //   // scale bigger width to 350
+          //   console.log('Width:');
+          //   //console.log(imageWidth);
+          //   img.width = '350';
+          //   //imageCroper(imageWidth, 350)
+          // } else {
+          //   // scale bigger height to 350
+          //   console.log('Height:');
+          //   //console.log(imageHeight);
+          //   img.height = '350';
+          //   //imageCroper(350, imageHeight);
+          // }
           imageArea.append(img);
         }
         // read content of the file

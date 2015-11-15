@@ -75,10 +75,8 @@
     width: 500px;
   }
   img.the-new-image {
+    max-height: 350px;
     margin: auto;
-    //max-height: 350px;
-    min-height: 350px;
-    min-width: 350px;
   }
 }
 
