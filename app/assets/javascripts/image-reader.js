@@ -3,8 +3,12 @@
 
 var imageReader;
 imageReader = function() {
+  var imageUpload = $('.the-image-upload');
   var imageInput = $('#imageInput');
-  var imageArea = $('.the-image-area');
+  var newImageContainer = $('.the-new-image-container');
+  var imageArea = $('.the-new-image-area');
+
+  var removeNewImageButton = $('.btn-remove-new-image');
 
   imageInput.on('change', function(e) {
     var file = imageInput[0].files[0];
@@ -50,6 +54,8 @@ imageReader = function() {
           //   img.height = '350';
           //   //imageCroper(350, imageHeight);
           // }
+          imageUpload.addClass('hidden');
+          newImageContainer.removeClass('hidden');
           imageArea.append(img);
         }
         // read content of the file
@@ -59,7 +65,13 @@ imageReader = function() {
       }
     } else {
       imageArea.html('');
-    }  
+    }
+  });
+  
+  removeNewImageButton.on('click', function() {
+    imageArea.html('');
+    newImageContainer.addClass('hidden');
+    imageUpload.removeClass('hidden');
   });
 }
 
