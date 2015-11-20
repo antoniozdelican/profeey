@@ -1,4 +1,8 @@
 %h1 New profession
+= simple_form_for @profession do |p|
+  = render partial: 'shared/error_messages', locals: { target: @profession }
+  = p.input :name, label: false, placeholder: 'Profession'
+  = p.button :submit
 
 //= render 'form'
 

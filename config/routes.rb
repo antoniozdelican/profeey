@@ -8,9 +8,14 @@ Rails.application.routes.draw do
     passwords: 'users/passwords' }
   resources :users, only: [:show]
 
+  patch 'update_user_professions' => 'users#update_user_professions'
+  put 'update_user_professions' => 'users#update_user_professions'
+
   resources :professions
 
   get 'welcome/add_profession' => 'welcome#add_profession'
+  #patch '/update_user_professions' => 'welcome#update_user_professions'
+  #put '/update_user_professions' => 'welcome#update_user_professions'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
