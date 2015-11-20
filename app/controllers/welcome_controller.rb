@@ -8,6 +8,11 @@ class WelcomeController < ApplicationController
     end
   end
 
+  # GET /welcome/add_profile_pic
+  def add_profile_pic
+    
+  end
+
   private
 
     # if user is not signed in redirect to root

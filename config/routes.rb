@@ -14,8 +14,7 @@ Rails.application.routes.draw do
   resources :professions
 
   get 'welcome/add_profession' => 'welcome#add_profession'
-  #patch '/update_user_professions' => 'welcome#update_user_professions'
-  #put '/update_user_professions' => 'welcome#update_user_professions'
+  get 'welcome/add_profile_pic' => 'welcome#add_profile_pic'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
