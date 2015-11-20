@@ -6,16 +6,6 @@ class WelcomeController < ApplicationController
     if !current_user.professions.any?
       current_user.professions.build
     end
-    # @profession = Profession.new
-  end
-
-  # PATCH/PUT /user
-  def update_user_professions
-    if current_user.update(user_params)
-      redirect_to root_path
-    else
-      render :add_profession
-    end
   end
 
   private
@@ -27,7 +17,4 @@ class WelcomeController < ApplicationController
       end
     end
 
-    def user_params
-      params.require(:user).permit(professions_attributes: [:name])
-    end
 end
