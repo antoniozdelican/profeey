@@ -1,3 +1,6 @@
+//= f.simple_fields_for :professions, include_id: false do |p|
+//= p.label :name, 'Tell who you are. For example Student, Manager, Bartender...'
+//= p.input :name, placeholder: 'Profession', label: false, input_html: { class: 'typeahead' }
 = simple_form_for(@profession) do |f|
   = f.error_notification
 
