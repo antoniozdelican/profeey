@@ -1,33 +1,41 @@
 .container.container-default
   .row
     .col-xs-12
-      %h1 Profile pic
 
-      .the-profile-pic-upload
-        .the-profile-pic-input-container
-          %label.the-input-label{:for => "profilePicInput"}
-            %img.img-responsive.the-input-placeholder{:src => "/placeholdit.png"}
-            .the-input-placeholder-text
-              %h1 Tap to add image
-              %span.fa.fa-hand-pointer-o
-          %input#profilePicInput.cropit-image-input.hidden{:type => "file"}
+      / .the-profile-pic-upload
+      /   .the-profile-pic-input-container
+      /     %label.the-input-label{:for => "profilePicInput"}
+      /       %img.img-responsive.the-input-placeholder{:src => "/placeholdit.png"}
+      /       .the-input-placeholder-text
+      /         %h1 Tap to add image
+      /         %span.fa.fa-hand-pointer-o
+      /     %input#profilePicInput.cropit-image-input.hidden{:type => "file"}
           
-        / .cropit-image-preview-container is needed for background image to work
-        .the-wrapper
-          .the-profile-pic-preview-container.hidden
-            .cropit-image-preview-container
-              .cropit-image-preview
+      /   / .cropit-image-preview-container is needed for background image to work
+      /   .the-wrapper
+      /     .the-profile-pic-preview-container.hidden
+      /       .cropit-image-preview-container
+      /         .cropit-image-preview
 
-            %button.close.btn-remove-profile-pic{:type => "button"}
-              x
+      /       %button.close.btn-remove-profile-pic{:type => "button"}
+      /         x
         
 
-        .image-size-label
-          Resize image
-        %input.cropit-image-zoom-input{:type => "range"}
+      /   .image-size-label
+      /     Resize image
+      /   %input.cropit-image-zoom-input{:type => "range"}
 
       %h1 Paperclip
 
+
       = simple_form_for @user, url: update_user_profile_pic_path do |f|
-        = f.input :profile_pic, as: :file
-        = f.button :submit
+        .image-editor
+          / %input.cropit-image-input{:type => "file"}
+          = f.input :profile_pic, as: :file, input_html: {class: 'cropit-image-input cropit2-input' }
+          .cropit-image-preview
+          .image-size-label
+            Resize image
+          %input.cropit-image-zoom-input{:type => "range"}
+          %input.hidden-image-data{:name => "image-data", :type => "hidden"}
+          / %button{:type => "submit"} Submit
+          = f.button :submit

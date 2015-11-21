@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   #accepts_nested_attributes_for :professions, reject_if: :check_profession
   accepts_nested_attributes_for :professions
 
-  has_attached_file :profile_pic, styles: { medium: '200x200>', small: '50x50>' }, default_url: ":style/default.png"
+  has_attached_file :profile_pic, styles: { large: '300x300>', medium: '200x200>', small: '50x50>' }, default_url: ":style/default.png"
   validates_attachment_content_type :profile_pic, content_type: /\Aimage\/.*\Z/
   
   def professions_attributes=(hash)
