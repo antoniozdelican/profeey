@@ -7,8 +7,8 @@
   background-size: cover;
   border-radius: 3px;
   margin-top: 7px;
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   cursor: move;
 }
 
@@ -26,6 +26,21 @@ input.cropit-image-input {
   position: relative;
   z-index: 10;
   display: block;
+}
+
+.the-wrapper {
+  position: relative;
+  width: 100%;
+}
+.the-profile-pic-preview-container {
+  position: absolute;
+  //top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,0);
+  -moz-transform: translate(-50%,0);
+  -o-transform: translate(-50%,0);
+  -ms-transform: translate(-50%,0);
+  transform: translate(-50%,0);
 }
 
 
@@ -56,4 +71,9 @@ input.cropit-image-input {
       }
     }
   }
+}
+
+img.the-input-placeholder {
+  width: 350px;
+  height: 350px;
 }

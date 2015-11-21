@@ -24,6 +24,8 @@ gem 'devise'
 gem 'simple_form'
 # Use Typeahead
 gem 'twitter-typeahead-rails'
+# User Paperclip
+gem 'paperclip', '~> 4.3'
 # Use Elasticsearch for search
 # gem 'searchkick'
 # Use CoffeeScript for .coffee assets and views

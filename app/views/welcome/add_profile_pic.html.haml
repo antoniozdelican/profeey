@@ -13,12 +13,13 @@
           %input#profilePicInput.cropit-image-input.hidden{:type => "file"}
           
         / .cropit-image-preview-container is needed for background image to work
-        .the-profile-pic-preview-container.hidden
-          .cropit-image-preview-container
-            .cropit-image-preview
+        .the-wrapper
+          .the-profile-pic-preview-container.hidden
+            .cropit-image-preview-container
+              .cropit-image-preview
 
-          %button.close.btn-remove-profile-pic{:type => "button"}
-            x
+            %button.close.btn-remove-profile-pic{:type => "button"}
+              x
         
 
         .image-size-label
