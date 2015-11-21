@@ -16,3 +16,6 @@
 !/log/.keep
 /tmp
 .DS_Store
+
+# Ignore development images
+/public/system
