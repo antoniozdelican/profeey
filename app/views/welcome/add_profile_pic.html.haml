@@ -25,3 +25,8 @@
         .image-size-label
           Resize image
         %input.cropit-image-zoom-input{:type => "range"}
+
+      %h1 Paperclip
+
+      = simple_form_for @user, url: update_user_profile_pic_path do |f|
+        = f.input :profile_pic, as: :file

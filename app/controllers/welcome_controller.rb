@@ -10,7 +10,7 @@ class WelcomeController < ApplicationController
 
   # GET /welcome/add_profile_pic
   def add_profile_pic
-    
+    @user = current_user
   end
 
   private

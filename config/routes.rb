@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   patch 'update_user_professions' => 'users#update_user_professions'
   put 'update_user_professions' => 'users#update_user_professions'
+  patch 'update_user_profile_pic' => 'users#update_user_profile_pic'
+  put 'update_user_profile_pic' => 'users#update_user_profile_pic'
 
   resources :professions
 
