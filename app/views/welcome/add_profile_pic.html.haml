@@ -2,3 +2,25 @@
   .row
     .col-xs-12
       %h1 Profile pic
+
+      .the-profile-pic-upload
+        .the-profile-pic-input-container
+          %label.the-input-label{:for => "profilePicInput"}
+            %img.img-responsive.the-input-placeholder{:src => "/placeholdit.png"}
+            .the-input-placeholder-text
+              %h1 Tap to add image
+              %span.fa.fa-hand-pointer-o
+          %input#profilePicInput.cropit-image-input.hidden{:type => "file"}
+          
+        / .cropit-image-preview-container is needed for background image to work
+        .the-profile-pic-preview-container.hidden
+          .cropit-image-preview-container
+            .cropit-image-preview
+
+          %button.close.btn-remove-profile-pic{:type => "button"}
+            x
+        
+
+        .image-size-label
+          Resize image
+        %input.cropit-image-zoom-input{:type => "range"}

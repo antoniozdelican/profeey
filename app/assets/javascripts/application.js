@@ -17,4 +17,5 @@
 //= require twitter/typeahead
 //= require jquery.color
 //= require Jcrop
+//= require jquery.cropit
 //= require_tree .
