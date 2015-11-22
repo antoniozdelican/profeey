@@ -14,6 +14,11 @@ class User < ActiveRecord::Base
     default_url: ":style/default.png"
   validates_attachment_content_type :profile_pic, content_type: /\Aimage\/.*\Z/
 
+  # follow relationships
+  has_many :active_relationships, class_name: 'FollowRelationship', 
+                                  foreign_key: 'follower_id', 
+                                  dependent: :destroy
+
   attr_accessor :crop_x, :crop_y, :crop_ratio
   after_update :reprocess_profile_pic, :if => :cropping?
 
