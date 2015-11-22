@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   # custom processor cropper for original profile_pic
   has_attached_file :profile_pic, 
     styles: { 
-      original: { :processors => [:cropper] }, large: '300x300#', medium: '200x200#'
+      original: { :processors => [:cropper] }, large: '300x300#', medium: '200x200#', small: '40x40#'
     }, 
     default_url: ":style/default.png"
   validates_attachment_content_type :profile_pic, content_type: /\Aimage\/.*\Z/
