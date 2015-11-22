@@ -15,10 +15,10 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :profile_pic, content_type: /\Aimage\/.*\Z/
 
   # follow_relationships
-  has_many :active_relationships, class_name: 'FollowRelationship', 
+  has_many :active_follow_relationship, class_name: 'FollowRelationship', 
                                   foreign_key: 'follower_id', 
                                   dependent: :destroy
-  has_many :following, through: :active_relationships, source: :followed
+  has_many :following, through: :active_follow_relationship, source: :followed
 
 
   attr_accessor :crop_x, :crop_y, :crop_ratio
@@ -42,12 +42,12 @@ class User < ActiveRecord::Base
 
   # follows a user
   def follow(other_user)
-    active_relationships.create(followed_id: other_user.id)
+    active_follow_relationship.create(followed_id: other_user.id)
   end
 
   # unfollows a user
   def unfollow(other_user)
-    active_relationships.find_by(followed_id: other_user.id).destroy
+    active_follow_relationship.find_by(followed_id: other_user.id).destroy
   end
 
   # returns true if the current user is following the other user
