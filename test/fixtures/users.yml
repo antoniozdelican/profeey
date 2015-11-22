@@ -1,1 +1,11 @@
 # empty
+
+antonio:
+  full_name: Antonio Zdelican
+  email: antonio@mail.com
+  encrypted_password: antonio1234
+
+ivan:
+  full_name: Ivan Zdelican
+  email: ivan@mail.com
+  encrypted_password: ivan1234
