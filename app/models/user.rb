@@ -14,10 +14,12 @@ class User < ActiveRecord::Base
     default_url: ":style/default.png"
   validates_attachment_content_type :profile_pic, content_type: /\Aimage\/.*\Z/
 
-  # follow relationships
+  # follow_relationships
   has_many :active_relationships, class_name: 'FollowRelationship', 
                                   foreign_key: 'follower_id', 
                                   dependent: :destroy
+  has_many :following, through: :active_relationships, source: :followed
+
 
   attr_accessor :crop_x, :crop_y, :crop_ratio
   after_update :reprocess_profile_pic, :if => :cropping?
@@ -38,6 +40,21 @@ class User < ActiveRecord::Base
     !crop_x.blank? && !crop_y.blank? && !crop_ratio.blank?
   end
 
+  # follows a user
+  def follow(other_user)
+    active_relationships.create(followed_id: other_user.id)
+  end
+
+  # unfollows a user
+  def unfollow(other_user)
+    active_relationships.find_by(followed_id: other_user.id).destroy
+  end
+
+  # returns true if the current user is following the other user
+  def following?(other_user)
+    following.include?(other_user)
+  end
+
   private
 
   # reprocess Papaerclip cropping for custom crop
@@ -46,15 +63,4 @@ class User < ActiveRecord::Base
     profile_pic.save
     #profile_pic.reprocess!
   end
-
-
-    # checks if profession in nested attributes already exists
-    # def check_profession(profession)
-    #   if existing_profession = Profession.find_by(name: profession['name'])
-    #     self.professions << existing_profession
-    #     true
-    #   else
-    #     false
-    #   end
-    # end
 end
