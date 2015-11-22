@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   resources :professions
 
+  get 'typeahead_professions' => 'professions#typeahead_professions'
+
   get 'welcome/add_profession' => 'welcome#add_profession'
   get 'welcome/add_profile_pic' => 'welcome#add_profile_pic'
 

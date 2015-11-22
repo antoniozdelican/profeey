@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     @professions = @user.professions
   end
 
-  # PATCH/PUT /user
+  # PATCH/PUT //update_user_professions
   def update_user_professions
     if current_user.update(user_params)
       redirect_to welcome_add_profile_pic_path
@@ -14,6 +14,7 @@ class UsersController < ApplicationController
     end
   end
 
+  # PATCH/PUT //update_user_profile_pic
   def update_user_profile_pic
     @user = current_user
     if @user.update(user_params)
@@ -26,6 +27,6 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:profile_pic, :crop_x, :crop_y, :crop_w, :crop_h, :crop_ratio, professions_attributes: [:id, :name])
+      params.require(:user).permit(:profile_pic, :crop_x, :crop_y, :crop_ratio, professions_attributes: [:id, :name])
     end
 end

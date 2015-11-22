@@ -7,6 +7,13 @@ class ProfessionsController < ApplicationController
     @professions = Profession.all
   end
 
+  # GET /professions
+  # used instead of index because of the bug with typeahed
+  def typeahead_professions
+    @professions = Profession.all
+    render json: @professions
+  end
+
   # GET /professions/1
   # GET /professions/1.json
   def show

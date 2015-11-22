@@ -1,44 +1,26 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+// Welcome flow JavaScript
 
 var cropit;
 
 cropit = function() {
-
   var profilePicUpload = $('.the-profile-pic-upload');
-  var profilePicInputContainer = $('.the-profile-pic-input-container');
-
-  var profilePicInput = $('#profilePicInput');
-
-  var profilePicPreviewContainer = $('.the-profile-pic-preview-container');
-
-  var removeProfilePicButton = $('.btn-remove-profile-pic');
-
+  
   profilePicUpload.cropit({
-    exportZoom: 1.25,
     imageBackground: true,
-    imageBackgroundBorderWidth: 20
-  });
+    imageBackgroundBorderWidth: 20,
+    onOffsetChange: function() {
+      // setting the x and y offsets
+      var offset = profilePicUpload.cropit('offset');
+      var x = offset['x'];
+      var y = offset['y'];
+      $('#cropX').val(x);
+      $('#cropY').val(y);
 
-  profilePicInput.on('change', function() {
-    var file = profilePicInput[0].files[0];
-    if (file) {
-      profilePicPreviewContainer.removeClass('hidden');
-      profilePicInputContainer.addClass('hidden');
+      // setting the ratio
+      var ratio = profilePicUpload.cropit('zoom');
+      $('#cropRatio').val(ratio.toFixed(2));
     }
   });
-
-  removeProfilePicButton.on('click', function() {
-    profilePicPreviewContainer.addClass('hidden');
-    
-    // removing old image
-    profilePicInput.val('');
-    $('.cropit-image-background').attr('src', '');
-    $('.cropit-image-preview').css('background-image', 'none');
-    
-    profilePicInputContainer.removeClass('hidden');
-  });
-
 }
 
 $(document).ready(cropit);

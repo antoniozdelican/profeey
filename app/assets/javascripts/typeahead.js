@@ -1,3 +1,5 @@
+// Typeahead function for dynamically showing professions while typing
+
 var typeahead;
 typeahead = function() {
   var professions = new Bloodhound({
@@ -6,7 +8,7 @@ typeahead = function() {
     
     // get professions json from database
     // WARNING!! consult the storage limit!!
-    prefetch: '/professions',
+    prefetch: '/typeahead_professions',
     
     // receives objects in form {"id":1,"name":"Abbot","created_at":"2015-10-11T19:01:55.000Z","updated_at":"2015-10-11T19:01:55.000Z"}
     sorter : function(a, b) {
