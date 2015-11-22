@@ -7,9 +7,12 @@ class User < ActiveRecord::Base
   #accepts_nested_attributes_for :professions, reject_if: :check_profession
   accepts_nested_attributes_for :professions
 
-  has_attached_file :profile_pic, styles: { large: '300x300>', medium: '200x200>', small: '50x50>' }, default_url: ":style/default.png"
+  has_attached_file :profile_pic, styles: { original: { :processors => [:cropper] }, large: '300x300#' }, default_url: ":style/default.png"
   validates_attachment_content_type :profile_pic, content_type: /\Aimage\/.*\Z/
-  
+
+  attr_accessor :crop_x, :crop_y, :crop_w, :crop_h, :crop_ratio
+  after_update :reprocess_profile_pic, :if => :cropping?
+
   def professions_attributes=(hash)
     hash.each do |sequence, profession_values|
       if !professions.where(name: profession_values[:name]).any?
@@ -18,6 +21,26 @@ class User < ActiveRecord::Base
         professions << Profession.find_or_create_by(name: profession_values[:name])
       end
     end
+  end
+
+  def cropping?
+    !crop_x.blank? && !crop_y.blank? && !crop_w.blank? && !crop_h.blank? && !crop_ratio.blank?
+  end
+
+  def profile_pic_geometry(style = :original)
+    logger.debug style
+    logger.debug profile_pic.path(style)
+    @geometry ||= {}
+    @geometry[style] ||= Paperclip::Geometry.from_file(profile_pic.path(style))
+  end
+
+  private
+
+  def reprocess_profile_pic
+    logger.debug 'reprocesss'
+    profile_pic.assign(profile_pic)
+    profile_pic.save
+    #profile_pic.reprocess!
   end
 
 
