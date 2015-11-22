@@ -3,6 +3,18 @@
     .col-xs-12
       %h1 Bla
 
+      %div
+        bla
+        .pull-right
+          .the-checkbox-container
+            %label.the-follow-all
+              Follow all
+            %a.the-checkbox.the-checkbox-all.the-check-all-people{:href => '#'}
+              %span.fa.fa-check-square
+            %a.the-checkbox.the-checkbox-all.the-uncheck-all-people.hidden{:href => '#'}
+              %span.fa.fa-square-o
+            %input.the-checkbox-all-real{:type => 'checkbox', :checked => true}
+
       .the-following-people
         - User.all.each do |user|
           - unless user == current_user
@@ -22,9 +34,9 @@
 
               .pull-right
                 .the-checkbox-container
-                  %a.the-checkbox.the-check-person{:href => '#'}
+                  %a.the-checkbox.the-checkbox-single.the-check-person{:href => '#'}
                     %span.fa.fa-check-square
-                  %a.the-checkbox.the-uncheck-person.hidden{:href => '#'}
+                  %a.the-checkbox.the-checkbox-single.the-uncheck-person.hidden{:href => '#'}
                     %span.fa.fa-square-o
                   
                   %input.the-checkbox-real{:type => 'checkbox', :checked => true}
