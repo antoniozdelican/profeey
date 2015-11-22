@@ -7,7 +7,11 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :professions
 
   # custom processor cropper for original profile_pic
-  has_attached_file :profile_pic, styles: { original: { :processors => [:cropper] }, large: '300x300#' }, default_url: ":style/default.png"
+  has_attached_file :profile_pic, 
+    styles: { 
+      original: { :processors => [:cropper] }, large: '300x300#', medium: '200x200#'
+    }, 
+    default_url: ":style/default.png"
   validates_attachment_content_type :profile_pic, content_type: /\Aimage\/.*\Z/
 
   attr_accessor :crop_x, :crop_y, :crop_ratio
