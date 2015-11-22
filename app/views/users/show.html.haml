@@ -1,8 +1,7 @@
 .container
   .row
     .col-xs-4
-      %img.img-responsive.img-rounded{:src => 'http://placehold.it/200x200'}
-      = image_tag current_user.profile_pic.url(:large)
+      = image_tag @user.profile_pic.url(:medium), class: 'img-responsive img-rounded'
     .col-xs-8
       %h1.user-name
         // = @user.full_name

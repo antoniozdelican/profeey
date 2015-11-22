@@ -75,3 +75,17 @@ img.the-input-placeholder {
   width: 350px;
   height: 350px;
 }
+
+// follow_people
+.the-following-people {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+a.the-checkbox {
+  font-size: 16px;
+  span {
+    // should be done to vertical align
+    margin-top: 14px;
+  }
+}

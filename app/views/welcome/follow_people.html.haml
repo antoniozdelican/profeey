@@ -1,6 +1,32 @@
 .container.container-default
   .row
     .col-xs-12
-      %h1 Follow People
+      %h1 Bla
 
-      = link_to 'Skip', root_path
+      .the-following-people
+        - User.all.each do |user|
+          - unless user == current_user
+            .the-header
+              = image_tag user.profile_pic.url(:small), class: 'img-rounded'
+              .the-name-and-professions
+                .the-name
+                  = link_to user.full_name, user
+                .the-professions
+                  Bla
+                  |
+                  Web bla
+                  |
+                  blabla
+                  |
+                  smthing
+
+              .pull-right
+                .the-checkbox-container
+                  %a.the-checkbox.the-check-person{:href => '#'}
+                    %span.fa.fa-check-square
+                  %a.the-checkbox.the-uncheck-person.hidden{:href => '#'}
+                    %span.fa.fa-square-o
+                  
+                  %input.the-checkbox-real{:type => 'checkbox', :checked => true}
+                     
+            %hr.small-margin
