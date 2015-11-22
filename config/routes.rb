@@ -19,6 +19,8 @@ Rails.application.routes.draw do
 
   get 'welcome/add_profession' => 'welcome#add_profession'
   get 'welcome/add_profile_pic' => 'welcome#add_profile_pic'
+  get 'welcome/add_interests' => 'welcome#add_interests'
+  get 'welcome/follow_people' => 'welcome#follow_people'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

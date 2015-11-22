@@ -3,9 +3,11 @@
     .col-xs-12
       %h1 Dada
 
-      = simple_form_for(current_user, as: resource_name, url: update_user_professions_path, html: { method: :put }) do |f|
+      = simple_form_for(@user, as: resource_name, url: update_user_professions_path, html: { method: :put }) do |f|
         = render partial: 'shared/error_messages', locals: { target: resource }
         = f.simple_fields_for :professions, include_id: false do |p|
           = p.label :name, 'Tell who you are. For example Student, Manager, Bartender...'
           = p.input :name, placeholder: 'Profession', label: false, input_html: { class: 'typeahead' } 
         = f.button :submit, 'Next', class: 'btn btn-success btn-full-width'
+
+      = link_to 'Skip', welcome_add_profile_pic_path
