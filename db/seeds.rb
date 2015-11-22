@@ -9,7 +9,7 @@
 # Seeding professions from data/professions.xml
 path_to_professions = Rails.root.join('data', 'professions.xml')
 doc = File.open(path_to_professions) { |f| Nokogiri::XML(f) }
- array = Array.new
+array = Array.new
 doc.xpath('//li').each do |node|
   profession = node.content
   if profession.include? '/'
@@ -23,3 +23,8 @@ end
 
  # puts array.count
  # puts array.uniq.count
+
+ # Seeding users
+ 10.times do |index|
+  User.create(full_name: "User#{index}", email: "user#{index}@mail.com", password: "user1234")
+ end
