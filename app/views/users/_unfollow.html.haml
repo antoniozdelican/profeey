@@ -1,0 +1,2 @@
+= simple_form_for current_user.active_follow_relationships.find_by(followed_id: @user.id), html: { class: 'the-follow-form', method: :delete } do |f|
+  = f.submit 'Unfollow', class: 'btn btn-default'

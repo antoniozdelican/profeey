@@ -8,12 +8,15 @@ Rails.application.routes.draw do
     passwords: 'users/passwords' }
   # GET /users/:id
   resources :users, only: [:show] do
-    # GET /users/:id/following
     # GET /users/:id/followers
+    # GET /users/:id/following
     member do
-      get :following, :followers
+      get :followers, :following
     end
   end
+  # POST /follow_relationships
+  # DELETE /follow_relationships/:id
+  resources :follow_relationships, only: [:create, :destroy]
 
   patch 'update_user_professions' => 'users#update_user_professions'
   put 'update_user_professions' => 'users#update_user_professions'

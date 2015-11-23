@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-
+  before_action :authenticate_user!, only: [:followers, :following]
+  
   def show
     @user = User.find(params[:id])
     @professions = @user.professions
@@ -23,6 +24,24 @@ class UsersController < ApplicationController
     else
       render 'welcome/add_profile_pic'
     end
+  end
+
+  # GET /users/:id/followers
+  def followers
+    @title = "Followers"
+    @user  = User.find(params[:id])
+    # @users = @user.followers.paginate(page: params[:page])
+    @users = @user.followers
+    render 'show_follow'
+  end
+
+  # GET /users/:id/following
+  def following
+    @title = "Following"
+    @user  = User.find(params[:id])
+    # @users = @user.following.paginate(page: params[:page])
+    @users = @user.following
+    render 'show_follow'
   end
 
   private

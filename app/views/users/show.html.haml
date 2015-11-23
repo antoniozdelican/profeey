@@ -4,8 +4,7 @@
       = image_tag @user.profile_pic.url(:medium), class: 'img-responsive img-rounded'
     .col-xs-8
       %h1.user-name
-        // = @user.full_name
-        Some John
+        = @user.full_name
       %p
         =# @professions.first.name
         %a{:href => '#'} Profession 1
@@ -99,13 +98,17 @@
       %b 25
       things
     .col-xs-4.col-sm-2
-      %b 500
-      followers
+      = link_to followers_user_path(@user), class: 'normal-link' do
+        %b 
+          = @user.followers.count
+        followers
     .col-xs-4.col-sm-2
-      %b 350
-      following
+      = link_to following_user_path(@user), class: 'normal-link' do
+        %b 
+          = @user.following.count
+        following
     .col-xs-6.col-sm-3.center-text
-      %button.btn.btn-default{:type => 'button'} Follow
+      = render partial: 'users/follow_form' if signed_in?
     .col-xs-6.col-sm-3.center-text
       %button.btn.btn-default{:type => 'button'} Message
   
