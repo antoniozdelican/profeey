@@ -7,7 +7,7 @@ gem 'rails', '4.2.4'
 gem 'sqlite3'
 # MySql
 gem 'mysql2', '~> 0.3.18'
-# Use Bootstrap 3
+# Use Bootstrap 3 with sass as the main css framework
 gem 'bootstrap-sass', '~> 3.3.5'
 # Use Font Awesome for cool icons
 gem 'font-awesome-rails'
@@ -15,17 +15,19 @@ gem 'font-awesome-rails'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-# Use Haml
+# Use Haml instead of html
 gem 'haml'
 gem "haml-rails", "~> 0.9"
-# Use Devise
+# Use Devise for authentication
 gem 'devise'
-# Use Simple Form
+# Use Simple Form for easy form generation
 gem 'simple_form'
-# Use Typeahead
+# Use Typeahead for dynamic twitter style dropdown while typing
 gem 'twitter-typeahead-rails'
-# User Paperclip
+# User Paperclip for managing images and other attachments
 gem 'paperclip', '~> 4.3'
+# Use Faker for populating data in the database
+gem 'faker', '~> 1.5'
 # Use Elasticsearch for search
 # gem 'searchkick'
 # Use CoffeeScript for .coffee assets and views

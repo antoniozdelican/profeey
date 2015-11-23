@@ -69,6 +69,8 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.6.0)
+    faker (1.5.0)
+      i18n (~> 0.5)
     font-awesome-rails (4.4.0.0)
       railties (>= 3.2, < 5.0)
     globalid (0.3.6)
@@ -199,6 +201,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.5)
   byebug
   devise
+  faker (~> 1.5)
   font-awesome-rails
   haml
   haml-rails (~> 0.9)
