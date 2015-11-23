@@ -1,12 +1,19 @@
 Rails.application.routes.draw do
-
+  # GET /
   root 'home#index'
-  
+  # Devise routes with custom controllers
   devise_for :users, controllers: { 
     registrations: 'users/registrations',
     sessions: 'users/sessions',
     passwords: 'users/passwords' }
-  resources :users, only: [:show]
+  # GET /users/:id
+  resources :users, only: [:show] do
+    # GET /users/:id/following
+    # GET /users/:id/followers
+    member do
+      get :following, :followers
+    end
+  end
 
   patch 'update_user_professions' => 'users#update_user_professions'
   put 'update_user_professions' => 'users#update_user_professions'

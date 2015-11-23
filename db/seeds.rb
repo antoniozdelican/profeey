@@ -21,10 +21,27 @@ doc.xpath('//li').each do |node|
   end
 end
 
- # puts array.count
- # puts array.uniq.count
+# puts array.count
+# puts array.uniq.count
 
- # Seeding users
- 10.times do |index|
-  User.create(full_name: "User#{index}", email: "user#{index}@mail.com", password: "user1234")
- end
+# Seeding users
+# 10.times do |index|
+#  User.create(full_name: "User#{index}", email: "user#{index}@mail.com", password: "user1234")
+# end
+
+99.times do |index|
+ full_name  = Faker::Name.name
+ email = "user#{index+1}@profeey.com"
+ password = "user1234"
+ User.create!(full_name: full_name,
+             email: email,
+             password: password)
+end
+
+# Seeding following relationships
+users = User.all
+user = users.first
+following = users[2..50]
+followers = users[3..40]
+following.each { |followed| user.follow(followed) }
+followers.each { |follower| follower.follow(user) }
