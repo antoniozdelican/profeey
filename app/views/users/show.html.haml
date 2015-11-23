@@ -99,7 +99,7 @@
       things
     .col-xs-4.col-sm-2
       = link_to followers_user_path(@user), class: 'normal-link' do
-        %b 
+        %b{id: 'followers'}
           = @user.followers.count
         followers
     .col-xs-4.col-sm-2

@@ -1,4 +1,5 @@
-= simple_form_for current_user.active_follow_relationships.build, html: {class: 'the-follow-form'} do |f|
+= simple_form_for current_user.active_follow_relationships.build, remote:true, html: {class: 'the-follow-form'} do |f|
   %div
+    =# f.input :followed_id, input_html: { value: @user.id }
     = hidden_field_tag :followed_id, @user.id
   = f.submit "Follow", class: "btn btn-default"
