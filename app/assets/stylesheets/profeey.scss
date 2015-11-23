@@ -45,6 +45,17 @@ a {
       // color: $dark-grey;
     }
   }
+  &.normal-link {
+    color: inherit;
+    &:hover {
+      // color: $dark-grey;
+      opacity: .7;
+    }
+    &:focus {
+      opacity: .7;
+      // color: $dark-grey;
+    }
+  }
 }
 
 hr {
