@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151122212708) do
+ActiveRecord::Schema.define(version: 20151123183621) do
 
   create_table "follow_relationships", force: :cascade do |t|
     t.integer  "follower_id", limit: 4
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20151122212708) do
     t.integer "user_id",       limit: 4
   end
 
+  add_index "professions_users", ["profession_id", "user_id"], name: "index_professions_users_on_profession_id_and_user_id", unique: true, using: :btree
   add_index "professions_users", ["profession_id"], name: "index_professions_users_on_profession_id", using: :btree
   add_index "professions_users", ["user_id"], name: "index_professions_users_on_user_id", using: :btree
 

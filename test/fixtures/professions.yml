@@ -1,1 +1,5 @@
-# empty
+student:
+  name: Student
+
+engineer:
+  name: Engineer
