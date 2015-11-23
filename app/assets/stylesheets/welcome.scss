@@ -50,7 +50,7 @@ input.cropit-image-input {
   }
   label.the-input-label {
     cursor: pointer;
-    color: &black;
+    color: $black;
     .the-input-placeholder-text {
       font-size: 36px;
       opacity: .4;
