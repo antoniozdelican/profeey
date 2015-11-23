@@ -1,1 +1,15 @@
-# empty
+one:
+  follower: antonio
+  followed: tina
+
+two:
+  follower: antonio
+  followed: ivan
+
+three:
+  follower: tina
+  followed: antonio
+
+four:
+  follower: mario
+  followed: antonio

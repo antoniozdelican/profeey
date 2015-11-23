@@ -9,3 +9,13 @@ ivan:
   full_name: Ivan Zdelican
   email: ivan@mail.com
   encrypted_password: ivan1234
+
+tina:
+  full_name: Tina Zdelican
+  email: tina@mail.com
+  encrypted_password: tina1234
+
+mario:
+  full_name: Mario Zdelican
+  email: mario@mail.com
+  encrypted_password: mario1234
