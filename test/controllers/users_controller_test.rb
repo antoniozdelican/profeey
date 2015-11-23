@@ -6,6 +6,10 @@ class UsersControllerTest < ActionController::TestCase
     @user = users(:antonio)
     @other_user = users(:ivan)
   end
+  test "should redirect index when not logged in" do
+      get :index
+      assert_redirected_to new_user_session_path
+    end
   test "should redirect followers when not logged in" do
     get :followers, id: @user
     assert_redirected_to new_user_session_path
