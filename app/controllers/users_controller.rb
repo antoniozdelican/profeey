@@ -4,6 +4,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @professions = @user.professions
+    # @things = @user.things.paginate(page: params[:page])
+    @things = @user.things
   end
 
   # PATCH/PUT //update_user_professions

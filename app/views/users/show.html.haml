@@ -95,7 +95,8 @@
           September 2010 - July 2014
   .row
     .col-xs-4.col-sm-2
-      %b 25
+      %b
+        = @user.things.count
       things
     .col-xs-4.col-sm-2
       = link_to followers_user_path(@user), class: 'normal-link' do
@@ -114,7 +115,14 @@
   
   %hr.small-margin
 
-  = render partial: 'things/things'
+  =# render partial: 'things/things'
+
+  - if @user.things.any?
+    .row
+      // = render partial: "things/thing", collection: @things
+      = render @things
+
+    =# will_paginate @microposts
 
 .modal-container
   .modal.fade.modal-full-screen{"aria-labelledby" => "largeModal", :role => "dialog", :tabindex => "-1"}

@@ -3,12 +3,13 @@
     .col-xs-12
       - if user_signed_in?
         - 3.times do
-          = render partial: 'things/thing'
+          =# render partial: "things/thing"
+          = render partial: "things/thing_legacy"
       - else
         %h1 Welcome to Profeey
         %p some text goes here
         %p and here as well
-        = render partial: 'users/shared/login_form'
+        = render partial: "users/shared/login_form"
 
 .modal-container
   .modal.fade.modal-full-screen{"aria-labelledby" => "largeModal", :role => "dialog", :tabindex => "-1"}
@@ -16,4 +17,4 @@
       %span{"aria-hidden" => "true"} &times;
     .modal-dialog.modal-dialog-new-thing
       .modal-content
-        = render partial: 'things/new_thing'
+        = render partial: "things/new_thing"
