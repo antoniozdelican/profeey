@@ -25,6 +25,9 @@ class User < ActiveRecord::Base
   has_many :following, through: :active_follow_relationships, source: :followed
   has_many :followers, through: :passive_follow_relationships, source: :follower
 
+  # Things
+  has_many :things
+
   # Tweak and attributes for custom processor cropper
   attr_accessor :crop_x, :crop_y, :crop_ratio
   after_update :reprocess_profile_pic, if: :cropping?

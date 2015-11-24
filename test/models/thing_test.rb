@@ -3,10 +3,8 @@ require 'test_helper'
 class ThingTest < ActiveSupport::TestCase
   def setup
     @user = users(:antonio)
-    # This code is not idiomatically correct.
-    @thing = Thing.new(title: "My new thing", 
-                      description: "This is my new thing I've been working on", 
-                      user_id: @user.id)
+    @thing = @user.things.build(title: "My new thing", 
+                              description: "This is my new thing I've been working on")
   end
 
   test "should be valid" do
@@ -16,6 +14,14 @@ class ThingTest < ActiveSupport::TestCase
   test "user id should be present" do
     @thing.user_id = nil
     assert_not @thing.valid?
+  end
+
+  test "thing should belong to the user" do
+    assert_equal @user, @thing.user
+  end
+
+  test "user should containt the thing" do
+    assert_includes @user.things, @thing
   end
 
   test "title should be present" do
@@ -48,5 +54,9 @@ class ThingTest < ActiveSupport::TestCase
   test "description should be at most 2000 characters" do
     @thing.description = "a" * 2001
     assert_not @thing.valid?
+  end
+
+  test "order of things should be most recent first" do
+    assert_equal things(:last), Thing.first
   end
 end
