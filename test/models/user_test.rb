@@ -101,4 +101,12 @@ class UserTest < ActiveSupport::TestCase
     }  
     assert_equal 1, user2.followers.count
   end
+
+  test "associated things should be destroyed" do
+    @user.save
+    @user.things.create!(title: "My thing", description: "My thing is awesome!")
+    assert_difference 'Thing.count', -1 do
+      @user.destroy
+    end
+  end
 end

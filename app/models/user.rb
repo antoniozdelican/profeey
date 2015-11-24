@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
   has_many :followers, through: :passive_follow_relationships, source: :follower
 
   # Things
-  has_many :things
+  has_many :things, dependent: :destroy
 
   # Tweak and attributes for custom processor cropper
   attr_accessor :crop_x, :crop_y, :crop_ratio
