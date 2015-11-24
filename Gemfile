@@ -28,6 +28,9 @@ gem 'twitter-typeahead-rails'
 gem 'paperclip', '~> 4.3'
 # Use Faker for populating data in the database
 gem 'faker', '~> 1.5'
+# Use StripAttributes to strip attributes of leading and trailing whitespace before validation. 
+# If the attribute is blank, it strips the value to nil by default.
+gem 'strip_attributes'
 # Use Elasticsearch for search
 # gem 'searchkick'
 # Use CoffeeScript for .coffee assets and views
